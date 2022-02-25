@@ -1,0 +1,194 @@
+#%%1.
+a= int(input("X:"))
+b= int(input("Y:"))
+
+product = a*b
+sum = a+b
+
+if( product > 1000 ):
+    print(sum)
+else:
+    print(product)
+
+
+
+
+#%%2.
+r = float(input("radius: "))
+
+area = 3.1416 *r
+
+parameter = 2*area
+
+print("Area: ", area)
+print("Parameter: 2", parameter)
+#%%3.
+
+p = int(input("Enter the principle amount: "))
+r = int(input("Enter the interest rate: "))
+t = int(input("ENter the time: "))
+
+b= a**t
+
+def compund_interest_2019_2_60_023(p,r,t):
+    x = p*(b)
+    return x
+
+x = compund_interest_2019_2_60_023(p, r, t)
+
+print (x)
+
+
+#%%4.
+N= int(input("The Value Of N :"))
+
+s = 0
+
+for i in range(1, N + 1, 1):
+    s = s + (i*i)
+
+print("The value of the series: ", s)
+
+#%%5.
+def prime_2019_2_60_023(n):
+    if (n==1):
+        return False
+
+    elif (n==2):
+        return True;
+    
+    else:
+        for i in range(2, n):
+            if(n % i==0):
+                return False
+        return True   
+
+n = int(input("Enter n: "))         
+print(prime_2019_2_60_023(n))
+#%%6.
+
+x = [0, 1]
+
+def fib(n):
+	if n<0:
+		print("negative number is not allowed")
+	elif n<= len(x):
+		return x[n-1]
+	else:
+		sum = fib(n-1)+fib(n-2)
+		x.append(sum)
+		return sum
+
+n=int(input("enter n: "))
+
+print(fib(n))
+#%%7.
+
+total = 0
+list = [2, 5, 1, 8, 10]
+
+for i in range(0, len(list)):
+    total = total + list[i]
+ 
+print(" sum: ", total)
+#%%8.
+
+n=[1,2,3,4,5]
+
+s=0
+
+def summation(s):
+ 
+        for i in range (0,len(n),1):
+            if(i%2==0):
+             s+=n[i]
+    
+        return s
+
+print( summation(s) )
+#%%9.
+
+num_list = [11, 22, 44, 45, 99]
+ 
+max= max(num_list[0], num_list[1])
+secondmax= min(num_list[0], num_list[1])
+
+n = len(num_list)
+
+for i in range(2, n):
+    if num_list[i] > max:
+        secondmax= max
+        max= num_list[i]
+        
+    elif num_list[i] > secondmax and \
+        max != num_list[i]:
+        secondmax= num_list[i]
+ 
+print("Second highest number is : ",\
+      str(secondmax))
+#%%10.
+
+n=[2,1,5,4,3]
+
+x=sorted(n)
+
+print(x[len(n)-2])
+#%%11.
+
+s = input("Enter a String:")
+n = int(input("Enter a number  less than  string: "))
+
+x = s[n-1:0]
+y = s[n: ]
+
+print("String is ",(x+y))
+#%%12.
+
+def rem(s,n):
+    
+   list=[]
+    
+   for i in range(n,len(s),1):
+       list.append(s[i])
+             
+   return list
+
+s=input()
+n=int(input())
+
+print( rem(s,n) )
+#%%13.
+
+count=0
+for i in "CSE303":
+    count=count+1
+    print(f'the count of the substring: {count}')
+#%%14.
+
+def palindrome_checker_2019_2_60_023(s):
+    return s == s[::-1]
+ 
+s = input("Enter a string: ")
+a = palindrome_checker_2019_2_60_023(s)
+ 
+if a:
+    print("Yes, It's a Palindrome")
+else:
+    print("No, It's not a Palindrome")
+#%%15.
+
+L1= [11,22,33,44,55,66,77]
+L2=[10,20,30,40,50,60,70]
+new_list=[]
+
+for i in range(0,len(L1)):
+    a= L1[i]
+    if(a%2!=0):
+        new_list.append(a)
+        
+for i in range(0,len(L2)):
+    b= L2[i]
+    if(b%2==0):
+        new_list.append(b)
+
+print(new_list)
